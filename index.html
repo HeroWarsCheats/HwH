@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Wars Helper Installation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for better readability and spacing */
+        body {
+            font-size: 2em; /* Base text size */
+            background-color: #A3A3A3; /* Light grey background for the body */
+        }
+        .container {
+            max-width: 800px;
+            background-color: #D3D3D3; /* Ensure the content area remains white */
+        }
+        img {
+            max-width: 100%; /* Ensure images are responsive */
+            height: auto;
+            border-radius: 1.5rem; /* Rounded corners */
+        }
+        th, td {
+            padding: 1rem; /* Add some padding to table cells */
+            text-align: center; /* Center align content in cells */
+        }
+        table {
+            width: 100%; /* Make table take full width of container */
+            border-collapse: collapse; /* Remove space between borders */
+            background-color: #AA7742; /* Yellow ochre background */
+        }
+        .image-title {
+            margin-bottom: 0.5rem; /* Space between title and image */
+            font-weight: bold;
+            font-size: 2em; /* Doubled size for the step text */
+        }
+        .step-description {
+            margin-top: 0.5rem; /* Space between title and description */
+            font-size: 1.2em; /* Same size as original text (2em from body * 0.5em = 1em, effectively the original base size of 1em from when it was not doubled) */
+        }
+        /* New style for Installation Steps */
+        th {
+            font-size: 1.3em; /* 30% bigger than the base 1em (which is 2em from body * 0.65 for the 1.3em result) */
+            color: blue;
+        }
+        .clickable-row {
+            cursor: pointer; /* Indicate that the row is clickable */
+        }
+    </style>
+</head>
+<body class="p-6">
+    <div class="container mx-auto p-8 rounded-lg shadow-md">
+        <h1 class="text-3xl font-bold text-center mb-8">How to Install Hero Wars Helper</h1>
+
+        <table class="mx-auto">
+            <thead>
+                <tr>
+                    <th>Installation Steps</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="clickable-row" data-link="chrome://extensions">
+                    <td>
+                        <div class="image-title">Step 1: Open Extensions</div>
+                        <div class="step-description">this step may not be necessary for Mozilla Firefox <br>
+                        You need to follow these steps in order to access the settings. <br>
+                        Google Chrome Reference Browser <br>
+					
+						</div>
+                        <img src="IMG/1Extension.jpg" alt="Step 1: Open Extensions">
+                    </td>
+                </tr>
+                <tr class="clickable-row" data-link="chrome://extensions">
+                    <td>
+                        <div class="image-title">Step 2: Enable Developer Mode</div>
+                        <div class="step-description">this step may not be necessary for Mozilla Firefox <br>
+                        You need to follow these steps in order to access the settings. <br>
+                        You may then need to close and reopen your browser for the changes to take effect <br>
+                        Google Chrome Reference Browser </div>
+                        <img src="IMG/2Devmode.jpg" alt="Step 2: Enable Developer Mode">
+                    </td>
+                </tr>
+                <tr class="clickable-row" data-link="https://www.tampermonkey.net/">
+                    <td>
+                        <div class="image-title">Step 3: Install Tampermonkey</div>
+                        <div class="step-description"> go on www.tampermonkey.net and download
+                        <br> the right version for your browser
+						<br> click here to open the link
+						</div>
+                        <img src="IMG/4Tampermonkey.jpg" alt="Step 3: Install Tampermonkey">
+                    </td>
+                </tr>
+                 <tr class="clickable-row" data-link="https://greasyfork.org/en/scripts/450693-herowarshelper">
+                    <td>
+                        <div class="image-title">Step 4: Go to Greasy Fork</div>
+                        <div class="step-description">on HeroWarsHelper page
+						<br> greasyfork.org/en/scripts/450693-herowarshelper
+						<br> click here to open the link
+						</div>
+                        <img src="IMG/4Greasyfork.jpg" alt="Step 4: Go to Greasy Fork">
+                    </td>
+                </tr>
+                 <tr class="clickable-row" data-link="https://www.hero-wars.com/">
+                    <td>
+                        <div class="image-title">Step 5: Hero Wars Helper Installed</div>
+                        <div class="step-description">You should see it
+						<br> opening the game www.hero-wars.com
+						</div>
+                        <img src="IMG/5HwHon.jpg" alt="Step 5: Hero Wars Helper Installed">
+                        <div class="step-description">if it does not work
+						<br> please ask help to your nerd friend 🤓
+						</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const rows = document.querySelectorAll('.clickable-row');
+            rows.forEach(row => {
+                row.addEventListener('click', function() {
+                    const link = this.dataset.link;
+                    if (link) {
+                        window.open(link, '_blank');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
